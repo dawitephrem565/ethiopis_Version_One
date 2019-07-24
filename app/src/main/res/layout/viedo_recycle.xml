@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/picid"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+
+            android:layout_marginStart="24dp"
+
+            android:layout_marginTop="16dp"
+            android:src="@drawable/avater"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/Main_Page_user_name"
+            android:id="@+id/User_Name_Main_Page"
+            android:textColor="#875959"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/picid"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:id="@+id/Date_Disply_main_Page"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/date_disply_button_style"
+            app:layout_constraintTop_toBottomOf="@+id/User_Name_Main_Page"
+            app:layout_constraintLeft_toLeftOf="@id/User_Name_Main_Page"
+            app:layout_constraintRight_toRightOf="@id/User_Name_Main_Page"
+            android:text="@string/Main_Page_user_date_display"
+            android:textSize="12sp"
+            />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/videoRecycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+     />
+</LinearLayout>
