@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "105125911380-7k59eml7hn4c7hqe016pqi8l4l7pf4mo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ethiopis_kids",
+            "certificate_hash": "8147a2b2308f78740458f293149defe4429ed8dc"
+          }
+        },
+        {
           "client_id": "105125911380-7cd1j80c59ipeln7vjsgrp89ekl72cnc.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

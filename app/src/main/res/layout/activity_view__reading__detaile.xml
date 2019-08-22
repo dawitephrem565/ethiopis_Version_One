@@ -1,44 +1,41 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/constraint"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/appBarLayout"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        >
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
             app:contentScrim="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
 
             >
 
             <ImageView
+                android:id="@+id/profileimage"
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
-                android:id="@+id/profileimage"
 
-                android:src="@drawable/ethipis_white_bg"
-                android:scaleType="centerCrop"/>
+                android:scaleType="centerCrop"
+                android:src="@drawable/ethipis_white_bg" />
 
 
             <android.support.v7.widget.Toolbar
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:title="@string/app_name"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"/>
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+                app:title="@string/app_name" />
 
 
         </android.support.design.widget.CollapsingToolbarLayout>
-
 
 
     </android.support.design.widget.AppBarLayout>
@@ -93,7 +90,7 @@
                 android:layout_marginBottom="8dp"
                 android:lineSpacingExtra="10sp"
                 android:padding="10dp"
-                android:textColor="#FF6F00"
+
 
                 android:text="Lorem ipsum dolor sit amet, onsectetur dipisicing  elit, sed do eiusmod tempor incididunt ut labore  dolore magna wirl aliqua. Ut enim ad minimeniam , quis nostrud exercitation ullamco laboris  nisinuli. Lorem ipsum dolor sit amet, consectetur dipisicing  elit, sed do eiusmod tempor incididunt ut labore
  dolore magna wirl aliqua. Ut enim ad minimeniam , quis nostrud exercitation ullamco laboris nisinuli.

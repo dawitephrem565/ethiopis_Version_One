@@ -34,18 +34,19 @@ public class Role_Model extends AppCompatActivity {
     ProgressDialog progressDialog;
     Context ctx;
     StorageReference mStorageRef;
-    FirebaseFirestore firestore;
+
     public Reading_content read;
     Rolemodel_Adapter reading_adapter;
     List<Rolemodel_items> list;
     ImageView advert_image;
+    FirebaseFirestore firestore ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_role__model);
 
         // database = FirebaseDatabase.getInstance().getReference("ethiopis/book");
-
+         firestore = FirebaseFirestore.getInstance();
         list = new ArrayList<>();
         reading_adapter = new Rolemodel_Adapter(getBaseContext(),list);
         list_container = (RecyclerView) findViewById(R.id.rolemodel_recycleviwe);
@@ -54,13 +55,8 @@ public class Role_Model extends AppCompatActivity {
         list_container.setLayoutManager(new LinearLayoutManager(this));
         list_container.setAdapter(reading_adapter);
 getadvert();
-        FirebaseFirestore firestore = FirebaseFirestore.getInstance();
-        FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder()
-                .setTimestampsInSnapshotsEnabled(true)
-                .build();
-        firestore.setFirestoreSettings(settings);
 
-        firestore = FirebaseFirestore.getInstance();
+
 
         firestore.collection("model").orderBy("timestamp", Query.Direction.DESCENDING).addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
@@ -85,13 +81,7 @@ getadvert();
 
     }
     public void getadvert(){
-        FirebaseFirestore firestore = FirebaseFirestore.getInstance();
-        FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder()
-                .setTimestampsInSnapshotsEnabled(true)
-                .build();
-        firestore.setFirestoreSettings(settings);
 
-        firestore = FirebaseFirestore.getInstance();
 
         firestore.collection("book_advert").addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override

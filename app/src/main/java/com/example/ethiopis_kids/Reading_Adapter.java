@@ -3,10 +3,12 @@ package com.example.ethiopis_kids;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -17,8 +19,6 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 public class Reading_Adapter extends RecyclerView.Adapter<Reading_Adapter.ViewHolder> {
     Context mcx;
@@ -45,7 +45,7 @@ public class Reading_Adapter extends RecyclerView.Adapter<Reading_Adapter.ViewHo
         holder.Desc.setText(content.getBook_story());
       // Picasso.with(context).load(content.getBook_cover()).into(holder.profileimg);
        Glide.with(mcx).load(content.getBook_cover()).into(holder.profileimg);
-
+     holder.cardView.setAnimation(AnimationUtils.loadAnimation(mcx,R.anim.fad_anim_transation));
        holder.itemView.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
@@ -53,8 +53,9 @@ public class Reading_Adapter extends RecyclerView.Adapter<Reading_Adapter.ViewHo
                intent.putExtra("book_title",content.getBook_title());
                intent.putExtra("book_story",content.getBook_story());
                intent.putExtra("book_cover",content.getBook_cover());
+               intent.putExtra("book_sound",content.getBook_sound());
                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-               intent.setClass(mcx,View_Reading_Detaile.class);
+               intent.setClass(mcx,reading_detaile.class);
                mcx.startActivity(intent);
            }
        });
@@ -72,12 +73,13 @@ public class Reading_Adapter extends RecyclerView.Adapter<Reading_Adapter.ViewHo
         TextView Desc ;
         Button read;
       ImageView profileimg;
+      CardView cardView;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
            title = (TextView)itemView.findViewById(R.id.reading_title);
            Desc = (TextView)itemView.findViewById(R.id.story_desc);
            profileimg= (ImageView)itemView.findViewById(R.id.reading_image);
-
+           cardView = (CardView)itemView.findViewById(R.id.content_box_card);
 
         }
     }

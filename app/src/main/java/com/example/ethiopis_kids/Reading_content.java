@@ -9,14 +9,22 @@ public class Reading_content {
     String  book_title ;
      String book_cover ;
      String book_story ;
+     String book_sound;
     public Reading_content() {
     }
-    public Reading_content(String book_title, String book_story, String book_cover) {
+    public Reading_content(String book_title, String book_story, String book_cover,String book_sound) {
         this.book_title = book_title;
         this.book_cover = book_cover;
         this.book_story = book_story;
+        this.book_sound=book_sound;
+    }
+    public void setBook_sound(String book_title) {
+        this.book_sound = book_sound;
     }
 
+    public String getBook_sound() {
+        return book_sound;
+    }
     public String getBook_title() {
         return book_title;
     }
@@ -28,6 +36,7 @@ public class Reading_content {
     public String getBook_cover() {
         return book_cover;
     }
+
 
     public void setBook_cover(String book_cover) {
         this.book_cover = book_cover;

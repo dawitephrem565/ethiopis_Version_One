@@ -6,6 +6,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
@@ -27,9 +28,11 @@ import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.crashlytics.android.Crashlytics;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -51,7 +54,7 @@ import java.util.Map;
 
 import javax.annotation.Nullable;
 
-import de.hdodenhof.circleimageview.CircleImageView;
+
 import io.fabric.sdk.android.Fabric;
 
 public class Reading_Time_Activity  extends Activity {
@@ -60,6 +63,8 @@ public class Reading_Time_Activity  extends Activity {
    //DatabaseReference database;
    ProgressDialog progressDialog;
    Context ctx;
+   FloatingActionButton play;
+    private FirebaseAnalytics mFirebaseAnalytics;
    ImageView reading_advert_banner;
    FirebaseFirestore firestore;
   public Reading_content read;
@@ -71,22 +76,20 @@ List<Reading_content> list;
         setContentView(R.layout.reading_recycle_view);
         // database = FirebaseDatabase.getInstance().getReference("ethiopis/book");
 
+         firestore = FirebaseFirestore.getInstance();
+        Fabric.with(this, new Crashlytics());
+        // Glide.with(this).load(R.drawable.avater).apply(RequestOptions.circleCropTransform()).into(profile_page);
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         list = new ArrayList<>();
         reading_adapter = new Reading_Adapter(getBaseContext(),list);
         list_container = (RecyclerView) findViewById(R.id.Reading_Recycle_View);
+
         reading_advert_banner = (ImageView)findViewById(R.id.read_advert_logo);
         list_container.setHasFixedSize(true);
         list_container.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
         list_container.setAdapter(reading_adapter);
 
 getadvert();
-        FirebaseFirestore firestore = FirebaseFirestore.getInstance();
-        FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder()
-                .setTimestampsInSnapshotsEnabled(true)
-                .build();
-        firestore.setFirestoreSettings(settings);
-
-        firestore = FirebaseFirestore.getInstance();
 
      firestore.collection("book").orderBy("timestamp", Query.Direction.DESCENDING).addSnapshotListener(new EventListener<QuerySnapshot>() {
          @Override
@@ -111,13 +114,7 @@ getadvert();
 
     }
     public void getadvert(){
-        FirebaseFirestore firestore = FirebaseFirestore.getInstance();
-        FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder()
-                .setTimestampsInSnapshotsEnabled(true)
-                .build();
-        firestore.setFirestoreSettings(settings);
 
-        firestore = FirebaseFirestore.getInstance();
 
         firestore.collection("book_advert").addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
@@ -139,6 +136,7 @@ getadvert();
                 }
             }
         });
+
     }
     @Override
     protected void onStart() {

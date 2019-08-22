@@ -34,10 +34,10 @@ ProgressDialog progressDialog;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.viedo_recycle);
         Fabric.with(this, new Crashlytics());
-        video_recycleView  = (RecyclerView)findViewById(R.id.videoRecycle);
+        video_recycleView  = (RecyclerView)findViewById(R.id.Reading_Video_Recycle_View);
         videolist = new ArrayList<>();
         video_adapter = new video_adapter(getBaseContext(),videolist);
-        video_recycleView = (RecyclerView) findViewById(R.id.videoRecycle);
+        //video_recycleView = (RecyclerView) findViewById(R.id.videoRecycle);
 
         video_recycleView.setHasFixedSize(true);
         video_recycleView.setLayoutManager(new LinearLayoutManager(this));
@@ -49,14 +49,8 @@ ProgressDialog progressDialog;
         progressDialog.setMessage("Video Time Opening Now");
         progressDialog.show();
        FirebaseFirestore firestore = FirebaseFirestore.getInstance();
-        FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder()
-                .setTimestampsInSnapshotsEnabled(true)
-                .build();
-        firestore.setFirestoreSettings(settings);
 
-        firestore = FirebaseFirestore.getInstance();
-
-        firestore.collection("video").orderBy("timestamp").addSnapshotListener(new EventListener<QuerySnapshot>() {
+        firestore.collection("video").document("Reading").collection("Video").orderBy("timestamp").addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
             public void onEvent(QuerySnapshot queryDocumentSnapshots, FirebaseFirestoreException e) {
                 if(e!=null)
