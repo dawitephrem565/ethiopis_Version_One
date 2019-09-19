@@ -10,8 +10,10 @@
     <android.support.v7.widget.CardView
         android:id="@+id/cardView2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardElevation="10dp"
+        android:layout_height="65dp"
+        android:padding="50dp"
+        app:cardBackgroundColor="#fac22d"
+        app:cardElevation="3dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -22,11 +24,10 @@
 
             <ImageView
                 android:id="@+id/profile_image"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
+                android:layout_width="54dp"
+                android:layout_height="0dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="16dp"
 
                 android:layout_marginBottom="8dp"
                 android:src="@drawable/avater"
@@ -37,11 +38,11 @@
             <ImageView
                 android:id="@+id/setting_btn"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="24dp"
                 android:layout_marginRight="24dp"
-                android:src="@drawable/ic_action_sort_1"
+                android:src="@drawable/setting"
 
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -49,15 +50,18 @@
             <TextView
                 android:id="@+id/User_Name_Main_Page"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="18dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+
+                android:layout_marginRight="8dp"
                 android:text="Hi User"
-
-
+                android:textColor="@android:color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/setting_btn"
                 app:layout_constraintStart_toEndOf="@+id/profile_image"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -68,10 +72,10 @@
 
                 android:layout_marginStart="2dp"
 
-
                 android:layout_marginLeft="2dp"
-                android:text="@string/Main_Page_user_onile_status"
+                android:text="@string/main_page_user_onile_status"
                 android:textSize="12sp"
+                android:visibility="invisible"
                 app:layout_constraintStart_toStartOf="@+id/User_Name_Main_Page"
                 app:layout_constraintTop_toBottomOf="@+id/User_Name_Main_Page" />
 
@@ -85,7 +89,7 @@
         android:layout_height="match_parent"
 
         android:layout_marginLeft="4dp"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -129,8 +133,9 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="8dp"
                         android:layout_marginRight="8dp"
-                        android:contentDescription="@string/Main_Page_Reading_Time_Content_Description"
+                        android:contentDescription="@string/main_page_reading_time_content_description"
                         android:src="@drawable/read"
+
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
@@ -145,7 +150,7 @@
                         android:layout_marginStart="28dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="50dp"
-                        android:text="@string/Main_Page_Reading_Time_TextView"
+                        android:text="@string/main_page_reading_time_textview"
                         android:textColor="#fff"
                         android:textSize="20sp"
                         android:textStyle="bold"
@@ -160,7 +165,7 @@
                         android:layout_marginStart="28dp"
                         android:layout_marginLeft="28dp"
                         android:layout_marginTop="8dp"
-                        android:text="@string/Main_Page_Number_of_Book_TextView"
+                        android:text="@string/main_page_number_of_book_textview"
                         android:textColor="#fff"
                         android:textSize="14sp"
                         app:layout_constraintStart_toStartOf="parent"
@@ -174,7 +179,7 @@
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
                         android:background="@drawable/main_btn_style"
-                        android:text="@string/Main_Page_Start_btton_text"
+                        android:text="@string/main_page_start_btton_text"
                         android:textColor="#a9dc35"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -229,7 +234,7 @@
                         android:layout_marginStart="28dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="50dp"
-                        android:text="@string/Main_Page_Video_TexiView"
+                        android:text="@string/main_page_video_texiview"
                         android:textColor="#fff"
                         android:textSize="20sp"
                         android:textStyle="bold"
@@ -244,7 +249,7 @@
                         android:layout_marginStart="28dp"
                         android:layout_marginLeft="28dp"
                         android:layout_marginTop="8dp"
-                        android:text="@string/Main_Page_number_of_video_textview"
+                        android:text="@string/main_page_number_of_video_textview"
 
                         android:textColor="#fff"
                         android:textSize="14sp"
@@ -257,9 +262,9 @@
                         android:layout_height="40dp"
                         android:layout_marginStart="16dp"
                         android:layout_marginLeft="16dp"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="8dp"
                         android:background="@drawable/main_btn_style"
-                        android:text="@string/Main_Page_start_video_Button"
+                        android:text="@string/main_page_start_video_button"
                         android:textColor="#9191ff"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -297,7 +302,7 @@
 
 
                         android:contentDescription="@string/this_is_role_model_image_thumblinail"
-                        android:src="@drawable/rolemodel"
+                        android:src="@drawable/rolemodel_resize"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
@@ -312,7 +317,7 @@
                         android:layout_marginStart="28dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="50dp"
-                        android:text="@string/Main_Page_Role_Model_Text_View"
+                        android:text="@string/main_page_role_model_text_view"
                         android:textColor="#fff"
                         android:textSize="20sp"
                         android:textStyle="bold"
@@ -327,7 +332,7 @@
                         android:layout_marginStart="28dp"
                         android:layout_marginLeft="28dp"
                         android:layout_marginTop="8dp"
-                        android:text="@string/Main_Page_number_of_roalmodel_books"
+                        android:text="@string/main_page_number_of_roalmodel_books"
                         android:textColor="#fff"
                         android:textSize="14sp"
                         app:layout_constraintStart_toStartOf="parent"
@@ -341,7 +346,7 @@
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
                         android:background="@drawable/main_btn_style"
-                        android:text="@string/Main_Page_Role_Model_start_button"
+                        android:text="@string/main_page_role_model_start_button"
                         android:textColor="#9191ff"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -358,7 +363,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                app:cardBackgroundColor="#02FEBB"
+                app:cardBackgroundColor="#ff8fa5"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="5dp"
 
@@ -380,7 +385,7 @@
 
 
                         android:contentDescription="@string/this_is_role_model_image_thumblinail"
-                        android:src="@drawable/ethiopis_koma"
+                        android:src="@drawable/tengran_pink"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
@@ -395,7 +400,7 @@
                         android:layout_marginStart="28dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="50dp"
-                        android:text="@string/Main_Page_News_Text_View"
+                        android:text="@string/main_activity_news_camp_main_textview"
                         android:textColor="#fff"
                         android:textSize="20sp"
                         android:textStyle="bold"
@@ -410,8 +415,9 @@
                         android:layout_marginStart="28dp"
                         android:layout_marginLeft="28dp"
                         android:layout_marginTop="8dp"
-                        android:text="@string/number_of_News_Text_View"
-                        android:textColor="#fff"
+                        android:text="@string/number_of_news_text_view"
+
+                        android:textColor="#ffff"
                         android:textSize="14sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/News_TextView" />
@@ -424,8 +430,8 @@
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
                         android:background="@drawable/main_btn_style"
-                        android:text="@string/Main_Page_Role_Model_start_button"
-                        android:textColor="#02FEBB"
+                        android:text="@string/main_page_news_camp_start_btn"
+                        android:textColor="#FE8FA5"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/number_of_News_TextView" />

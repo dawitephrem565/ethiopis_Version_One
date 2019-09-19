@@ -1,4 +1,4 @@
-package com.example.ethiopis_kids;
+package com.ethiopis.ethiopis_kids;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.ethiopis_kids", appContext.getPackageName());
+        assertEquals("com.ethiopis.ethiopis_kids", appContext.getPackageName());
     }
 }

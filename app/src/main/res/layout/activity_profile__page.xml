@@ -10,14 +10,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/appBarLayout"
-        android:background="@android:color/transparent"
+
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         >
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:background="@drawable/pattern"
+            android:layout_height="300dp"
+            
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
 
 
@@ -33,7 +33,7 @@
 
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:scaleType="centerCrop"
@@ -139,7 +139,7 @@
                         android:layout_marginStart="16dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="64dp"
-                        android:text="My Profile"
+                        android:text="@string/my_profile_myprofile_title"
 
                         android:textColor="#3F51B5"
                         android:textSize="22sp"
@@ -168,7 +168,7 @@
                         android:layout_marginStart="24dp"
                         android:layout_marginLeft="24dp"
                         android:layout_marginTop="20dp"
-                        android:text="@string/Main_Page_user_name"
+                        android:text="@string/My_Profile_Username"
                         android:textColor="#030303"
                         android:textSize="14sp"
 
@@ -182,7 +182,7 @@
                         android:layout_marginStart="24dp"
                         android:layout_marginLeft="24dp"
                         android:layout_marginTop="16dp"
-                        android:text="Name"
+                        android:text="@string/my_profile_user_name"
                         android:textSize="12sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/profile_username" />
@@ -194,7 +194,7 @@
                         android:layout_marginStart="24dp"
                         android:layout_marginLeft="24dp"
                         android:layout_marginTop="16dp"
-                        android:text="Age"
+                        android:text="@string/My_Profile_Age_title"
                         android:textSize="12sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/profile_Age_hint" />
@@ -211,7 +211,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        app:layout_constraintGuide_begin="395dp" />
+                        app:layout_constraintGuide_begin="419dp" />
 
                     <android.support.constraint.Guideline
                         android:id="@+id/guideline3"
@@ -281,7 +281,7 @@
                         android:layout_marginStart="24dp"
                         android:layout_marginLeft="24dp"
                         android:layout_marginTop="16dp"
-                        android:text="Grade"
+                        android:text="@string/My_Profile_Grade"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -309,7 +309,7 @@
                         android:layout_marginTop="16dp"
                         android:text="Addis Abeba"
                         android:textColor="#030303"
-
+                        android:visibility="gone"
                         android:textSize="14sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/divider4" />
@@ -323,6 +323,7 @@
 
                         android:layout_marginTop="16dp"
                         android:text="SubCity"
+                        android:visibility="gone"
                         android:textSize="14sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textView7" />
@@ -362,8 +363,8 @@
                         android:layout_marginStart="24dp"
                         android:layout_marginLeft="24dp"
                         android:layout_marginTop="16dp"
-                        android:text="School"
-                        app:layout_constraintStart_toStartOf="@+id/divider6"
+                        android:text="@string/My_Profile_School"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
 

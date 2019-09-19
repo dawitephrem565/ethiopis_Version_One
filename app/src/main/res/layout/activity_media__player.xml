@@ -4,107 +4,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-   tools:context=".Media_Player">
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
- <ImageView
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content"
-     android:id="@+id/back_image"
-     android:layout_marginStart="8dp"
-     android:layout_marginLeft="8dp"
-     android:layout_marginTop="8dp"
-     android:layout_marginEnd="8dp"
-     android:layout_marginRight="8dp"
-     android:background="@drawable/ethiopis_koma"
-     app:layout_constraintEnd_toEndOf="parent"
-     app:layout_constraintStart_toStartOf="parent"
-     app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="centerCrop"
 
- <TextView
-     android:id="@+id/textView3"
-     android:layout_width="45dp"
-     android:layout_height="wrap_content"
-     android:layout_marginStart="16dp"
-     android:layout_marginLeft="16dp"
-     android:layout_marginTop="16dp"
-     app:layout_constraintStart_toStartOf="parent"
-     app:layout_constraintTop_toBottomOf="@+id/back_image" />
+        app:layout_constraintBottom_toTopOf="@+id/story_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.113" />
 
- <TextView
-     android:id="@+id/textView4"
-     android:layout_width="93dp"
-     android:layout_height="wrap_content"
-     android:layout_marginStart="48dp"
-     android:layout_marginLeft="48dp"
-     android:layout_marginTop="16dp"
-     android:layout_marginEnd="8dp"
-     android:layout_marginRight="8dp"
-     app:layout_constraintEnd_toStartOf="@+id/textView2"
-     app:layout_constraintStart_toEndOf="@+id/textView3"
-     app:layout_constraintTop_toBottomOf="@+id/back_image" />
+    <TextView
+        android:id="@+id/story_title"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:fontFamily="@font/fredokaoneregular"
+        android:gravity="center"
+        android:text="Title"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11" />
 
- <TextView
-     android:id="@+id/textView2"
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
-     android:layout_marginTop="16dp"
-     android:layout_marginEnd="28dp"
-     android:layout_marginRight="28dp"
-     app:layout_constraintEnd_toEndOf="parent"
-     app:layout_constraintTop_toBottomOf="@+id/back_image" />
- <SeekBar
-     android:id="@+id/seekBar"
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content"
-     android:layout_marginStart="8dp"
-     android:layout_marginLeft="8dp"
-     android:layout_marginTop="52dp"
-     android:layout_marginEnd="8dp"
-     android:layout_marginRight="8dp"
-     app:layout_constraintEnd_toEndOf="parent"
-     app:layout_constraintHorizontal_bias="0.0"
-     app:layout_constraintStart_toStartOf="parent"
-     app:layout_constraintTop_toBottomOf="@id/back_image" />
 
- <LinearLayout
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content"
-     android:layout_marginStart="8dp"
-     android:layout_marginLeft="8dp"
-     android:layout_marginTop="52dp"
-     android:layout_marginEnd="8dp"
-     android:layout_marginRight="8dp"
-     android:gravity="center"
-     app:layout_constraintEnd_toEndOf="parent"
-     app:layout_constraintStart_toStartOf="parent"
-     app:layout_constraintTop_toBottomOf="@+id/seekBar">
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="142dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
-  <Button
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_margin="5dp"
-      android:id="@+id/button4"
-      android:text="back" />
 
-  <Button
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_margin="5dp"
-      android:id="@+id/button3"
-      android:text="play" />
-  <Button
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_margin="5dp"
-      android:id="@+id/button2"
-      android:text="pause" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="00:00"
+        app:layout_constraintBottom_toTopOf="@+id/seekbar"
+        app:layout_constraintStart_toStartOf="parent" />
 
-  <Button
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_margin="5dp"
-      android:id="@+id/button"
-      android:text="forward" />
- </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="32dp"
+        android:src="@android:drawable/ic_media_play"
+        android:text="PLAY SOUND"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

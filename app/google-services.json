@@ -8,6 +8,51 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:105125911380:android:d1d60356607335c1f406c1",
+        "android_client_info": {
+          "package_name": "com.ethiopis.ethiopis_kids"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "105125911380-fre0g1ovve98r8klif4jansvu6qju414.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ethiopis.ethiopis_kids",
+            "certificate_hash": "ebf8196f1048a77c9edb2d266eeacae11883949b"
+          }
+        },
+        {
+          "client_id": "105125911380-c8r7poj1dd6gcdmsqhpj87mq1pi5iqps.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ethiopis.ethiopis_kids",
+            "certificate_hash": "7656b64f93ab724e282a53ecd7f5354da20b3072"
+          }
+        },
+        {
+          "client_id": "105125911380-q8k20ej1tos412vg9aupaado543hgdnk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeBtfhV1SP38lg0B3Syd__m00wUJxqdPY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "105125911380-q8k20ej1tos412vg9aupaado543hgdnk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:105125911380:android:93b99085c51528fc",
         "android_client_info": {
           "package_name": "com.example.ethiopis_kids"

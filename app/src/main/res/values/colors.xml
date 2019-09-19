@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#2196F3</color>
-    <color name="color_profile_actionbar">#9192ff</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimary">#fac22d</color>
+    <color name="color_profile_actionbar">#fac22d</color>
+    <color name="colorPrimaryDark">#fac22d</color>
     <color name="colorAccent">#797979</color>
-    <color name="colorPrimary_Profile_Page">#3b69f3</color>
+    <color name="colorPrimary_Profile_Page">#fac22d</color>
 
 </resources>

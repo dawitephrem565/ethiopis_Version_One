@@ -25,7 +25,7 @@
                 android:layout_height="400dp"
 
                 android:scaleType="centerCrop"
-                android:src="@drawable/ethipis_white_bg" />
+                 />
 
 
             <android.support.v7.widget.Toolbar
@@ -62,13 +62,19 @@
         android:tint="@android:color/white"
         app:layout_anchor="@+id/appBarLayout2"
         app:layout_anchorGravity="end|bottom" />
+
+
+
+
     <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="20dp"
 
-        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior"
-        >
+
+        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
+
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -81,16 +87,44 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="18dp"
                 android:layout_marginLeft="18dp"
-                android:layout_marginTop="0dp"
+                android:layout_marginTop="20dp"
 
+                android:fontFamily="@font/headfont"
                 android:lineSpacingExtra="5sp"
                 android:padding="5dp"
                 android:text="Hello World"
-                android:fontFamily="@font/headfont"
                 android:textColor="#75BE41"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/seekBar"
+                android:layout_above="@+id/detail"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="6dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toEndOf="@+id/title_viewactivity"
+                android:layout_toRightOf="@+id/title_viewactivity" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:id="@+id/seekbarhint"
+                android:layout_above="@+id/seekBar"
+                android:layout_marginStart="21dp"
+                android:layout_marginLeft="21dp"
+                android:layout_marginBottom="-43dp"
+                android:layout_toEndOf="@+id/title_viewactivity"
+                android:layout_toRightOf="@+id/title_viewactivity"
+                android:text="00:00" />
 
             <TextView
                 android:id="@+id/detail"
@@ -120,12 +154,12 @@ Lorem ipsum dolor sit amet, consectetur dipisicing
 , quis nostrud exercitation ullamco laboris nisinuli."
                 android:textSize="16sp" />
 
+                 </RelativeLayout>
 
-
-        </RelativeLayout>
 
 
     </android.support.v4.widget.NestedScrollView>
+
 
 
 

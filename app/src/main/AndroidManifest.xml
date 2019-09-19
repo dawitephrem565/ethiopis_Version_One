@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.ethiopis_kids">
-
+    package="com.ethiopis.ethiopis_kids">
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
     <meta-data
         android:name="firebase_crashlytics_collection_enabled"
         android:value="false" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ethiopis_logo"
@@ -18,7 +15,20 @@
         android:roundIcon="@mipmap/ethiopis_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Media_Player"></activity>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-4660054418346074~5664036864"/>
+        <activity android:name=".RoleModel_Video_Page"
+            android:screenOrientation="landscape"
+            ></activity>
+        <activity android:name=".Login_Activity"></activity>
+        <activity android:name=".News_Activity_Sponcer" />
+        <activity android:name=".Role_Model_Sponcer" />
+        <activity android:name=".Video_Sponcer" />
+        <activity android:name=".Langage" />
+        <activity android:name=".Sponser_splash" />
+        <activity android:name=".walkthrough_profile_page" />
+
         <activity android:name=".Video_Play_Screen" />
         <activity
             android:name=".Funny_Video_Activity"
@@ -40,19 +50,21 @@
             android:name=".Profile_Page"
             android:parentActivityName=".MainActivity"
             android:theme="@style/profiletheme" />
-        <activity android:name=".Video_Menu" />
         <activity
-            android:name=".Login_Activity"
-            android:windowSoftInputMode="adjustPan" />
+            android:name=".Video_Menu"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/ActionBar" />
         <activity android:name=".Role_Model" />
         <activity android:name=".MainActivity" />
-
         <activity
             android:name=".Video_activity"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme" />
         <activity android:name=".View_Reading_Detaile" />
-        <activity android:name=".reading_detaile" />
+        <activity
+            android:name=".reading_detaile"
+            android:parentActivityName=".Reading_Time_Activity"
+            android:theme="@style/ActionBar" />
 
         <service android:name=".GettingDeviceToken">
             <intent-filter>

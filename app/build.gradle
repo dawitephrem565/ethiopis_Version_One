@@ -3,12 +3,15 @@ apply plugin: 'com.android.application'
 apply plugin: 'io.fabric'
 android {
     compileSdkVersion 28
+    lintOptions {
+        checkReleaseBuilds false;
+    }
     defaultConfig {
-        applicationId "com.example.ethiopis_kids"
+        applicationId "com.ethiopis.ethiopis_kids"
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "1.2"
         multiDexEnabled true
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -43,6 +46,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-storage:17.0.0'
     implementation 'com.google.firebase:firebase-firestore:17.1.2'
     implementation 'com.google.firebase:firebase-inappmessaging-display:17.0.4'
+    implementation 'com.google.firebase:firebase-database:16.0.4'
+    implementation 'com.google.firebase:firebase-ads:17.0.0'
     testImplementation 'junit:junit:4.12'
     implementation 'com.firebaseui:firebase-ui-database:0.4.0'
     // Check for v11.4.2 or higher

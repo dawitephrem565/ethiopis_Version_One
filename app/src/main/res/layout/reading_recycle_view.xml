@@ -3,50 +3,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
     <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        >
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
             app:contentScrim="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
 
             >
+
 
             <ImageView
                 android:id="@+id/read_advert_logo"
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
+                android:layout_height="300dp"
 
-                android:scaleType="centerCrop"
-                />
+                android:scaleType="centerCrop" />
 
 
             <android.support.v7.widget.Toolbar
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:title="@string/app_name"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"/>
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+                app:title="@string/app_name" />
 
 
         </android.support.design.widget.CollapsingToolbarLayout>
-
 
 
     </android.support.design.widget.AppBarLayout>
 
 
     <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollView3"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:background="@drawable/background"
 
+
+        android:layout_height="wrap_content"
         app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,6 +55,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
             android:layout_height="match_parent">
 
             <android.support.v7.widget.RecyclerView
@@ -65,20 +67,39 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:padding="5dp"
-             >
+
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="0dp"
+                android:padding="5dp">
 
 
             </android.support.v7.widget.RecyclerView>
 
-        </RelativeLayout>
 
+        </RelativeLayout>
 
     </android.support.v4.widget.NestedScrollView>
 
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
+        android:layout_below="@+id/Reading_Recycle_View"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
 
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"
+        ads:layout_anchor="@+id/nestedScrollView3"
+        ads:layout_anchorGravity="bottom|center"></com.google.android.gms.ads.AdView>
 
 
 

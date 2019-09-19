@@ -16,25 +16,24 @@
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:background="@drawable/backpro"
-            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            android:layout_height="300dp"
+
             app:contentScrim="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
 
             >
+
             <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent" />
 
 
-               <ImageView
-                   android:layout_width="match_parent"
-                   android:layout_height="match_parent"
-                   android:src="@drawable/ethipis_white_bg"
-                   android:scaleType="centerCrop"
-                   android:id="@+id/News_Image"
-                   />
-
+            <ImageView
+                android:id="@+id/News_Image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                 />
 
 
         </android.support.design.widget.CollapsingToolbarLayout>
@@ -105,9 +104,9 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:lineSpacingExtra="10sp"
+                android:lineSpacingExtra="5sp"
 
-                android:padding="6dp"
+                android:padding="10dp"
                 android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
                 android:textSize="17sp"
                 app:layout_constraintEnd_toEndOf="parent"

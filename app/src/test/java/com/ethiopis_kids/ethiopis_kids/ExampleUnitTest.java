@@ -1,4 +1,4 @@
-package com.example.ethiopis_kids;
+package com.ethiopis.ethiopis_kids;
 
 import org.junit.Test;
 
